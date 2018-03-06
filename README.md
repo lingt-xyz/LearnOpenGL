@@ -1,2 +1,2 @@
-# LearnOpenGL
-code from https://learnopengl.com/, base on Code::Blocks
+# learnopengl.com code repository
+Contains code samples for all tutorials of [https://learnopengl.com](https://learnopengl.com). 
