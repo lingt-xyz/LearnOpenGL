@@ -79,8 +79,8 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader lightingShader("5.2.light_casters.vs", "5.2.light_casters.fs");
-    Shader lampShader("5.2.lamp.vs", "5.2.lamp.fs");
+    Shader lightingShader("shaders/5.2.light_casters.vs", "shaders/5.2.light_casters.fs");
+    Shader lampShader("shaders/5.2.lamp.vs", "shaders/5.2.lamp.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -298,7 +298,7 @@ void processInput(GLFWwindow *window)
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-    // make sure the viewport matches the new window dimensions; note that width and 
+    // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }

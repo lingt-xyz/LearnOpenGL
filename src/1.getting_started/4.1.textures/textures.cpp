@@ -49,7 +49,7 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader ourShader("4.1.texture.vs", "4.1.texture.fs"); 
+    Shader ourShader("shaders/4.1.texture.vs", "shaders/4.1.texture.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -58,9 +58,9 @@ int main()
          0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
          0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // bottom right
         -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
-        -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left 
+        -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left
     };
-    unsigned int indices[] = {  
+    unsigned int indices[] = {
         0, 1, 3, // first triangle
         1, 2, 3  // second triangle
     };
@@ -88,7 +88,7 @@ int main()
     glEnableVertexAttribArray(2);
 
 
-    // load and create a texture 
+    // load and create a texture
     // -------------------------
     unsigned int texture;
     glGenTextures(1, &texture);
@@ -166,7 +166,7 @@ void processInput(GLFWwindow *window)
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-    // make sure the viewport matches the new window dimensions; note that width and 
+    // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }
