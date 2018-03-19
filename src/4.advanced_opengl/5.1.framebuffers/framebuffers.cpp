@@ -77,8 +77,8 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("5.1.framebuffers.vs", "5.1.framebuffers.fs");
-    Shader screenShader("5.1.framebuffers_screen.vs", "5.1.framebuffers_screen.fs");
+    Shader shader("shaders/5.1.framebuffers.vs", "shaders/5.1.framebuffers.fs");
+    Shader screenShader("shaders/5.1.framebuffers_screen.vs", "shaders/5.1.framebuffers_screen.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -127,7 +127,7 @@ int main()
         -0.5f,  0.5f, -0.5f,  0.0f, 1.0f
     };
     float planeVertices[] = {
-        // positions          // texture Coords 
+        // positions          // texture Coords
          5.0f, -0.5f,  5.0f,  2.0f, 0.0f,
         -5.0f, -0.5f,  5.0f,  0.0f, 0.0f,
         -5.0f, -0.5f, -5.0f,  0.0f, 2.0f,
@@ -237,7 +237,7 @@ int main()
 
         // render
         // ------
-        // bind to framebuffer and draw scene as we normally would to color texture 
+        // bind to framebuffer and draw scene as we normally would to color texture
         glBindFramebuffer(GL_FRAMEBUFFER, framebuffer);
         glEnable(GL_DEPTH_TEST); // enable depth testing (is disabled for rendering screen-space quad)
 
@@ -322,7 +322,7 @@ void processInput(GLFWwindow *window)
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-    // make sure the viewport matches the new window dimensions; note that width and 
+    // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }

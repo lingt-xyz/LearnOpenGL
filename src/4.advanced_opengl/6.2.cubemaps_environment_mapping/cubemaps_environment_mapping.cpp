@@ -78,8 +78,8 @@ int main()
 
     // build and compile shaders
     // -------------------------
-    Shader shader("6.2.cubemaps.vs", "6.2.cubemaps.fs");
-    Shader skyboxShader("6.2.skybox.vs", "6.2.skybox.fs");
+    Shader shader("shaders/6.2.cubemaps.vs", "shaders/6.2.cubemaps.fs");
+    Shader skyboxShader("shaders/6.2.skybox.vs", "shaders/6.2.skybox.fs");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -128,7 +128,7 @@ int main()
         -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f
     };
     float skyboxVertices[] = {
-        // positions          
+        // positions
         -1.0f,  1.0f, -1.0f,
         -1.0f, -1.0f, -1.0f,
          1.0f, -1.0f, -1.0f,
@@ -301,7 +301,7 @@ void processInput(GLFWwindow *window)
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-    // make sure the viewport matches the new window dimensions; note that width and 
+    // make sure the viewport matches the new window dimensions; note that width and
     // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }
@@ -378,7 +378,7 @@ unsigned int loadTexture(char const * path)
 // -X (left)
 // +Y (top)
 // -Y (bottom)
-// +Z (front) 
+// +Z (front)
 // -Z (back)
 // -------------------------------------------------------
 unsigned int loadCubemap(vector<std::string> faces)
